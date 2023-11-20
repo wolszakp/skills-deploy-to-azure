@@ -8,11 +8,11 @@ env:
   IMAGE_REGISTRY_URL: ghcr.io
   AZURE_RESOURCE_GROUP: cd-with-actions
   AZURE_APP_PLAN: actions-ttt-deployment
-  AZURE_LOCATION: '"Central US"'
+  AZURE_LOCATION: '"West Europe"'
   ###############################################
-  ### Replace <username> with GitHub username ###
+  ### Replace piowo with GitHub username ###
   ###############################################
-  AZURE_WEBAPP_NAME: <username>-ttt-app
+  AZURE_WEBAPP_NAME: wolszakp-ttt-app
 
 jobs:
   setup-up-azure-resources:
@@ -46,7 +46,7 @@ jobs:
         if: success()
         run: |
           az webapp config container set --docker-custom-image-name nginx --docker-registry-server-password ${{secrets.CR_PAT}} --docker-registry-server-url https://${{env.IMAGE_REGISTRY_URL}} --docker-registry-server-user ${{github.actor}} --name ${{ env.AZURE_WEBAPP_NAME }} --resource-group ${{ env.AZURE_RESOURCE_GROUP }} --subscription ${{secrets.AZURE_SUBSCRIPTION_ID}}
-
+%
   destroy-azure-resources:
     runs-on: ubuntu-latest
 
