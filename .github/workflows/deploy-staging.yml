@@ -9,8 +9,8 @@ env:
   ###############################################
   ### Replace <username> with GitHub username ###
   ###############################################
-  DOCKER_IMAGE_NAME: wolszakp-azure-ttt
-  AZURE_WEBAPP_NAME: wolszakp-ttt-app
+  DOCKER_IMAGE_NAME: piowo-azure-ttt
+  AZURE_WEBAPP_NAME: piowo-ttt-app
   ###############################################
 
 jobs:
