@@ -12,7 +12,7 @@ env:
   ###############################################
   ### Replace piowo with GitHub username ###
   ###############################################
-  AZURE_WEBAPP_NAME: wolszakp-ttt-app
+  AZURE_WEBAPP_NAME: piowo-ttt-app
 
 jobs:
   setup-up-azure-resources:
